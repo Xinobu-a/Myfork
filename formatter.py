@@ -14,6 +14,7 @@ class DocumentFormatter:
             'font_size':self.DEFAULT_FONT_SIZE,
             'line_spacing':self.DEFAULT_LINE_SPACING,
             'indent':self.DEFAULT_INDENT,
+            'first_line_indent': self.DEFAULT_INDENT
         }
     def clean_whitespace(self,content):
         content = re.sub(r'\s+','',content)
@@ -33,6 +34,23 @@ class DocumentFormatter:
         while cleaned_lines and cleaned_lines[-1]=='':
             cleaned_lines.pop(-1)
         return '\n'.join(cleaned_lines)
+
+    def apply_basic_format(self, content):
+        """
+        应用基础格式（考核要求2：统一格式设置）
+        默认：宋体小四、固定行距18磅
+        """
+        content = self.clean_whitespace(content)
+        formatted_content = f"""/* 
+    文档排版信息：
+    - 字体：{self.custom_settings['font_name']}
+    - 字号：{self.custom_settings['font_size']}pt（小四）
+    - 行距：{self.custom_settings['line_spacing']}磅（固定值）
+    - 首行缩进：{self.custom_settings['first_line_indent']}英寸
+    =============================== */
+    {content}
+    """
+        return formatted_content
     def save_as_word(self,content,out_path):
         try:
             doc = Document()

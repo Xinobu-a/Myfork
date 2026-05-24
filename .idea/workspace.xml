@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0baf995e-d40f-4a0e-812e-e25c5f13ddce" name="更改" comment="修改了menu模块的一个bug" />
+    <list default="true" id="0baf995e-d40f-4a0e-812e-e25c5f13ddce" name="更改" comment="测试中修改了一处运行错误">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/formatter.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +34,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.formatter.executor": "Run",
     "Python.main.executor": "Run",
     "Python.menu.executor": "Run",
     "Python.viewtest.executor": "Run",
@@ -87,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779611601619</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="测试中修改了一处运行错误">
+      <option name="closed" value="true" />
+      <created>1779612065373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779612065373</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +130,7 @@
     <MESSAGE value="制作了菜单系统模块" />
     <MESSAGE value="添加了主程序" />
     <MESSAGE value="修改了menu模块的一个bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了menu模块的一个bug" />
+    <MESSAGE value="测试中修改了一处运行错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试中修改了一处运行错误" />
   </component>
 </project>

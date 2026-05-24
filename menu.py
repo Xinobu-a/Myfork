@@ -41,11 +41,6 @@ class MenuSystem:
             self.current_content = formatted_content
             self.is_modified = True
             print("\n基础排版完成！")
-            stats = self.formatter.get_statistics(formatted_content)
-            print(f"\n排版后统计:")
-            print(f"  - 字符数: {stats['char_count']}")
-            print(f"  - 单词数: {stats['word_count']}")
-            print(f"  - 段落数: {stats['paragraph_count']}")
         except Exception as e:
             print(f"\n排版失败: {str(e)}")
     def save_document(self):

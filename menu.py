@@ -1,6 +1,6 @@
 """菜单系统模块"""
 import os
-class Menu:
+class MenuSystem:
     def __init__(self,file_handler,formatter):
         self.fil_handler=file_handler
         self.formatter = formatter

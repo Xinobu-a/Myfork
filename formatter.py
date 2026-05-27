@@ -72,4 +72,45 @@ class DocumentFormatter:
         except Exception as e:
             raise e(f"保存失败: {out_path}")
 
+    def get_statistics(self, content):
+        """
+        获取文本统计信息（进阶功能：字数统计）
 
+        Args:
+            content: 文本内容
+
+        Returns:
+            dict: 包含字符数、单词数、行数、段落数
+        """
+        if not content:
+            return {
+                'char_count': 0,
+                'word_count': 0,
+                'line_count': 0,
+                'paragraph_count': 0
+            }
+
+        # 1. 字符数（不含空格、换行、回车）
+        char_count = len(content.replace(' ', '').replace('\n', '').replace('\r', ''))
+
+        # 2. 单词数（匹配中文汉字和英文单词）
+        import re
+        # 匹配中文：[\u4e00-\u9fff] 匹配所有常用汉字
+        # 匹配英文：[a-zA-Z]+ 匹配连续英文字母
+        words = re.findall(r'[\u4e00-\u9fff]+|[a-zA-Z]+', content)
+        word_count = len(words)
+
+        # 3. 行数（按换行符分割）
+        lines = content.split('\n')
+        line_count = len(lines)
+
+        # 4. 段落数（按空行分隔，过滤掉空段落）
+        paragraphs = [p for p in content.split('\n\n') if p.strip()]
+        paragraph_count = len(paragraphs)
+
+        return {
+            'char_count': char_count,
+            'word_count': word_count,
+            'line_count': line_count,
+            'paragraph_count': paragraph_count
+        }

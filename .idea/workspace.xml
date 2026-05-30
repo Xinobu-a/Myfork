@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0baf995e-d40f-4a0e-812e-e25c5f13ddce" name="更改" comment="更新了2处错误">
-      <change afterPath="$PROJECT_DIR$/AI_DEVELOPMENT_LOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/formatter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
     </list>
@@ -36,6 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.file_handler.executor": "Run",
     "Python.formatter.executor": "Run",
     "Python.main.executor": "Run",
     "Python.menu.executor": "Run",
@@ -43,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature"
+    "git-widget-placeholder": "master"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -138,7 +140,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

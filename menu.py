@@ -120,15 +120,19 @@ class MenuSystem:
             font_size = int(font_size) if font_size else None
             line_spacing = int(line_spacing) if line_spacing else None
             indent = float(indent) if indent else None
-            self.formatter.set_custom_format(
-                font_name=font_name if font_name else None,
-                font_size=font_size,
-                line_spacing=line_spacing,
-                indent=indent
-            )
+            # 直接修改自定义设置
+            if font_name:
+                self.formatter.custom_settings['font_name'] = font_name
+            if font_size:
+                self.formatter.custom_settings['font_size'] = font_size
+            if line_spacing:
+                self.formatter.custom_settings['line_spacing'] = line_spacing
+            if indent:
+                self.formatter.custom_settings['first_line_indent'] = indent
+
             # 重新应用格式
             if self.current_content:
-                formatted_content = self.formatter.set_basic_format(self.current_content)
+                formatted_content = self.formatter.apply_basic_format(self.current_content)
                 self.current_content = formatted_content
                 self.is_modified = True
             print("\n✓ 自定义格式已更新！")
@@ -163,8 +167,8 @@ class MenuSystem:
             save_choice = input("是否保存当前文档？(y/n): ").strip().lower()
             if save_choice == 'y':
                 self.save_document()
-            print("\n感谢使用文档自动排版工具！再见！")
-            return True
+        print("\n感谢使用文档自动排版工具！再见！")
+        return True
     def run(self):
         """运行菜单系统"""
         while True:

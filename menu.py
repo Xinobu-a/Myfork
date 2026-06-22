@@ -70,7 +70,9 @@ class MenuSystem:
             else:
                 if not file_path.endswith('.txt'):
                     file_path += '.txt'
-                self.file_handler.save_file(self.current_content, file_path, 'text')
+                # 保存 txt 时也要去掉排版信息头
+                content_to_save = self.formatter._strip_format_header(self.current_content)
+                self.file_handler.save_file(content_to_save, file_path, 'txt')
                 print(f"\n文档已保存为文本格式: {file_path}")
             self.is_modified = False
         except Exception as e:

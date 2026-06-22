@@ -50,6 +50,10 @@ class DocumentFormatter:
 
         return '\n'.join(cleaned_lines)
 
+    def get_current_settings(self):
+        """返回当前自定义格式设置"""
+        return self.custom_settings.copy()
+
     def apply_basic_format(self, content):
         """
         应用基础格式（考核要求2：统一格式设置）
